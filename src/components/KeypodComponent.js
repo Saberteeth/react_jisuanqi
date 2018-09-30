@@ -6,10 +6,11 @@ const Buttons = [
   '4', '5', '6', '-', false,
   '1', '2', '3', '+', false,
   '0', '00', '.', '=', false,
+  '(', ')'
 ];
 /**
  * 函数组件会比class组件更轻量级，性能更好，如果只是简单组件建议使用函数组件。
- * @param { onClick } param
+ * @param { { onClick: (event:{ target: { name: string } })=>void } } param
  */
 export default function KeypodComponent({ onClick }) {
   return (

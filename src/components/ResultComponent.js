@@ -1,7 +1,7 @@
 import React from 'react';
 /**
  * 同 KeypodComponent
- * @param { reuslt } param
+ * @param { { result: string } } param
  */
 export default function ResultComponent({ result }) {
   return (
