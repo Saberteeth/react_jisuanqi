@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Buttons = [
-  'AC', '+/-', '%', '/',
-  '7', '8', '9', '*',
-  '4', '5', '6', '-',
-  '1', '2', '3', '+',
-  '0', '00', '.', '='
+  'AC', '+/-', '%', '/', false,
+  '7', '8', '9', '*', false,
+  '4', '5', '6', '-', false,
+  '1', '2', '3', '+', false,
+  '0', '00', '.', '=', false,
 ];
 /**
  * 函数组件会比class组件更轻量级，性能更好，如果只是简单组件建议使用函数组件。
@@ -14,7 +14,7 @@ const Buttons = [
 export default function KeypodComponent({ onClick }) {
   return (
     <div className="button">
-      {Buttons.map((name) => <button name={name} key={name} onClick={e => onClick(e.target.name)}>{name}</button>)}
+      {Buttons.map((name, key) => name ? <button name={name} key={key} onClick={e => onClick(e.target.name)}>{name}</button> : <br key={key}/>)}
     </div>
   )
 }

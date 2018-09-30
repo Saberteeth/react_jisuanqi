@@ -1,6 +1,6 @@
 import React from 'react';
 /**
- * 同 ResultComponent
+ * 同 KeypodComponent
  * @param { reuslt } param
  */
 export default function ResultComponent({ result }) {
